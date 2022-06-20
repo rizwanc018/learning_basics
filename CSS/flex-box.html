@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* * {
+            box-sizing: border-box;
+        } */
+        .container1 {
+            display: flex;
+            background: red;
+            /* height: 300px; */
+            /* flex-direction: row; */
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+
+        }
+
+        .container1 > div {
+            background-color: aliceblue;
+            padding: 15px;
+            margin: 10px;
+            width: 75px;
+            border: 1px solid rgba(0, 0, 0);
+
+        }
+
+        @media (max-width: 500px) {
+            .container1 {
+                background-color: blue;
+                /* height: fill; */
+            }
+        }
+    </style>
+    <title>Flex Box</title>
+</head>
+<body>
+    <div class="container1">
+        <div style="order: 2">Div 1</div>
+        <div style="flex-grow: 4;">Div 2</div>
+        <div>Div 3</div>
+        <div style="flex-shrink: 0;">Div 4</div>
+        <div>Div 5</div>
+        <div>Div 6</div>
+        <div>Div 7</div>
+        <div>Div 8</div>
+        <div>Div 9</div>
+        <div>Div 10</div>
+        <div>Div 11</div>
+        <div>Div 12</div>
+        <div>Div 13</div>
+        <div>Div 14</div>
+        <div>Div 15</div>
+    </div>
+</body>
+</html>

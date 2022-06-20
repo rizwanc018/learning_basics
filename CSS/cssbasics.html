@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia&effect=fire"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      div.color {
+        background-color: red;
+        padding: 10%;
+        margin: 10%;
+      }
+      /* .outer {
+
+      } */
+      .inner {
+        background-color: blueviolet;
+        padding: 10%;
+        margin: 10%;
+        outline-style: solid;
+        outline-color: black;
+        outline-width: 10px;
+        outline-offset: 10px;
+      }
+      #head1,
+      #para1 {
+        text-align: center;
+        /* border: solid; */
+        padding: 15%;
+        background-color: aquamarine;
+      }
+
+      h1,
+      p {
+        text-align: center;
+        background-color: aliceblue;
+        /* direction: rtl;
+        unicode-bidi: bidi-override; */
+        font-style: oblique;
+      }
+
+      h1 {
+        font-family: "Sofia", sans-serif;
+        color: white;
+        text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+      }
+      .max-width {
+        max-width: 600px;
+        margin: auto;
+      }
+
+      a:link,
+      a:visited {
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:active {
+        text-decoration: underline;
+        color: red;
+        background-color: yellow;
+        padding: 2px 7px;
+        border: 5px solid yellow;
+        border-radius: 5px;
+        cursor: wait;
+      }
+
+      table {
+        max-width: 500px;
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      table,
+      td,
+      th {
+        border-collapse: collapse;
+        width: 50%;
+        text-align: center;
+        border-bottom: 1px solid blue;
+      }
+
+      tr:hover {
+        background-color: crimson;
+        visibility: hidden;
+      }
+      tr:nth-child(even) {
+        background-color: aqua;
+      }
+      div.sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: 0;
+        padding: 10px;
+        background-color: antiquewhite;
+        border: 2px solid blueviolet;
+      }
+
+      .fixed {
+        position: fixed;
+        width: 300px;
+        background-color: burlywood;
+        top: 0;
+        right: 0;
+        padding: 0.4%;
+        border: 2px solid silver;
+        z-index: 1;
+      }
+
+      .container {
+        position: relative;
+      }
+      .topleft {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 20px;
+        color: aliceblue;
+      }
+      img {
+        max-width: 1000px;
+        height: auto;
+        /* opacity: 0.3; */
+      }
+
+      .float-div {
+        float: right;
+        padding: 20px;
+        /* width: 33.33%; */
+      }
+
+      .div1 {
+        background: red;
+      }
+
+      .div2 {
+        background: green;
+      }
+
+      .div3 {
+        background: blue;
+      }
+
+      .float-img {
+        float: right;
+        margin: 8px;
+      }
+      .clearfix {
+        overflow: auto;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      li {
+        display: inline-block;
+        font-size: 20px;
+        padding: 20px;
+      }
+
+      li a {
+        color: antiquewhite;
+      }
+
+      li a:hover {
+        background-color: #222;
+      }
+      q:lang(no) {
+        quotes: "#" "#";
+      }
+      ::selection {
+        color: red;
+        background: yellow;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(31, 39, 36);
+        min-width: 160px;
+        z-index: 1;
+      }
+      .dropdown:hover .dropdown-content{
+        display: block;
+      }
+      .dropdown-content a{
+        display: block;
+        padding: 12px 6px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+<div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#new">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li style="float: right;"><a href="#about">About</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+      <div class="dropdown-content">
+        <a href="#">Link1</a>
+        <a href="#">Link2</a>
+        <a href="#">Link3</a>
+      </div>
+    </li>
+  </ul>
+</div>
+    <div class="outer color">
+      <div class="inner">
+        <h1 id="head1">heading</h1>
+      </div>
+      <div class="inner">
+        <p id="para1">Hello World!</p>
+      </div>
+    </div>
+    <div class="width color">
+      <p>Just Width</p>
+    </div>
+    <div class="max-width color">
+      <p>Max-width</p>
+    </div>
+    <h1 class="font-effect-fire">Lorum Ipsem</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut
+      <span style="vertical-align: sub; font-style: italic">subsub</span> labore
+      et dolore magna aliqua. Viverra nibh cras pulvinar mattis nunc sed.
+      Phasellus faucibus scelerisque eleifend donec.
+    </p>
+    <a href="google.com" target="_blank">Google</a>
+    <div class="sticky">Iam Sticky</div>
+    <table>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+      </tr>
+      <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+      </tr>
+      <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+      </tr>
+      <tr>
+        <td>Water</td>
+        <td>Griffin</td>
+      </tr>
+      <tr>
+        <td>Air</td>
+        <td>Griffin</td>
+      </tr>
+    </table>
+    <div class="fixed">Fixed Position</div>
+    <div class="container">
+      <img src="image1.jpg" alt="an image" width="1000" height="1000" />
+      <div class="topleft">Top Left</div>
+    </div>
+    <div style="width: 100%; display: block">
+      <div class="float-div div1">Div1</div>
+      <div class="float-div div2">Div2</div>
+      <div class="float-div div3">Div3</div>
+    </div>
+
+    <p class="clearfix" style="clear: both">
+      <img
+        class="float-img"
+        src="image1.jpg"
+        alt="an image"
+        width="170"
+        height="170"
+      />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+      imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+      scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec
+      congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+      Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent
+      convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+      dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+      venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+      venenatis. Integer fringilla congue eros non fermentum. Sed dapibus
+      pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+    </p>
+
+    <p>Some text <q lang="no">A quote in a paragraph</q> Some text.</p>
+
+    <!-- <div class="box">
+      <h1>Box 1</h1>
+      <p>Some content Some content Some content</p>
+    </div>
+    <div class="box">
+      <h1>Box 2</h1>
+      <p>Some content Some content Some content</p>
+      <p>Some content Some content Some content</p>
+      <p>Some content Some content Some content</p>
+    </div> -->
+
+  </body>
+</html>

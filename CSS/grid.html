@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .container {
+        margin-bottom: 10px;
+      }
+      .grid {
+        display: grid;
+        padding: 10px;
+        column-gap: 10px;
+        row-gap: 10px;
+        grid-template-columns: auto auto auto;
+        background-color: royalblue;
+      }
+      .grid > div,
+      .grid2 > div {
+        border: 1px solid rgba(0, 0, 0);
+        background-color: antiquewhite;
+      }
+
+      .item1 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
+      .item2 {
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+      .item7 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 5;
+      }
+      .grid2 {
+        display: grid;
+        padding: 10px;
+        grid-template-columns: auto auto auto;
+        background-color: red;
+      }
+      .grid2 > div {
+        margin: 10px;
+      }
+    </style>
+    <title>Grid</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="grid">
+        <div class="item1">Div 1</div>
+        <div class="item2">Div 2</div>
+        <div>Div 3</div>
+        <div>Div 4</div>
+        <div>Div 5</div>
+        <div>Div 6</div>
+        <div class="item7">Div 7</div>
+        <div>Div 8</div>
+        <div>Div 9</div>
+      </div>
+    </div>
+    <div class="grid2">
+      <div>Div 1</div>
+      <div>Div 2</div>
+      <div>Div 3</div>
+      <div>Div 4</div>
+      <div>Div 5</div>
+      <div>Div 6</div>
+      <div>Div 7</div>
+      <div>Div 8</div>
+      <div>Div 9</div>
+    </div>
+  </body>
+</html>
