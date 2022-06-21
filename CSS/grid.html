@@ -8,12 +8,12 @@
       .container {
         margin-bottom: 10px;
       }
-      .grid {
+      .grid, .grid2 {
         display: grid;
         padding: 10px;
         column-gap: 10px;
         row-gap: 10px;
-        grid-template-columns: auto auto auto;
+        /* grid-template-columns: auto auto auto; */
         background-color: royalblue;
       }
       .grid > div,
@@ -37,10 +37,7 @@
         grid-row-end: 5;
       }
       .grid2 {
-        display: grid;
-        padding: 10px;
         grid-template-columns: auto auto auto;
-        background-color: red;
       }
       .grid2 > div {
         margin: 10px;
@@ -62,6 +59,7 @@
         <div>Div 9</div>
       </div>
     </div>
+    <div class="container">
     <div class="grid2">
       <div>Div 1</div>
       <div>Div 2</div>
@@ -72,6 +70,7 @@
       <div>Div 7</div>
       <div>Div 8</div>
       <div>Div 9</div>
+    </div>
     </div>
   </body>
 </html>
