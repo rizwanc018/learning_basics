@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- <base href="https://www.w3schools.com/" /> -->
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .header {
+        text-align: center;
+        padding: 20px;
+        font-size: 20px;
+        background-color: aqua;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .column {
+        flex: 25%;
+        max-width: 25%;
+        padding: 4px;
+        /* margin: 4px; */
+      }
+
+      img {
+        border-radius: 10px;
+        margin: 4px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0);
+      }
+
+      @media (max-width: 800px) {
+        .column {
+          flex: 50%;
+          max-width: 50%;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .column {
+          flex: 100%;
+          max-width: 100%;
+        }
+      }
+    </style>
+
+    <title>Responsive Image Gallery</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Responsive Image Gallery</h1>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img src="images/party.jpg" style="width: 100%" />
+        <img src="images/rocks.jpg" style="width: 100%" />
+        <img src="images/waterfall.jpg" style="width: 100%" />
+        <img src="images/paris.jpg" style="width: 100%" />
+        <img src="images/forest.jpg" style="width: 100%" />
+        <img src="images/mist.jpg" style="width: 100%" />
+        <img src="images/london.jpg" style="width: 100%" />
+      </div>
+
+      <div class="column">
+        <img src="images/sea.jpg" style="width: 100%" />
+        <img src="images/water.jpg" style="width: 100%" />
+        <img src="images/leaves.jpg" style="width: 100%" />
+        <img src="images/grass.jpg" style="width: 100%" />
+        <img src="images/cloud.jpg" style="width: 100%" />
+        <img src="images/mountain.jpg" style="width: 100%" />
+        <img src="images/underground.jpg" style="width: 100%" />
+      </div>
+
+      <div class="column">
+        <img src="images/party.jpg" style="width: 100%" />
+        <img src="images/rocks.jpg" style="width: 100%" />
+        <img src="images/waterfall.jpg" style="width: 100%" />
+        <img src="images/paris.jpg" style="width: 100%" />
+        <img src="images/forest.jpg" style="width: 100%" />
+        <img src="images/mist.jpg" style="width: 100%" />
+        <img src="images/london.jpg" style="width: 100%" />
+      </div>
+
+      <div class="column">
+        <img src="images/sea.jpg" style="width: 100%" />
+        <img src="images/water.jpg" style="width: 100%" />
+        <img src="images/leaves.jpg" style="width: 100%" />
+        <img src="images/grass.jpg" style="width: 100%" />
+        <img src="images/cloud.jpg" style="width: 100%" />
+        <img src="images/mountain.jpg" style="width: 100%" />
+        <img src="images/underground.jpg" style="width: 100%" />
+      </div>
+    </div>
+  </body>
+</html>
