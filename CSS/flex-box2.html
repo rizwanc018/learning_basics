@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      ul {
+        border: 2px solid red;
+      }
+
+      li {
+        border: 2px solid green;
+        list-style-type: none;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      .navbar {
+        display: flex;
+        gap: 1rem;
+        padding: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .navbar > * {
+        /* flex: 1; */
+        /* flex-grow: 1; */
+      }
+/* ********************************************************* */
+      .columns {
+        border: 1rem solid crimson;
+      }
+      .card {
+        background-color: green;
+        padding: 5px;
+      }
+
+      .columns {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .columns > * {
+        /* flex-shrink: 1; */
+        flex: 1;
+        flex-grow: 1;
+      }
+
+      .columns:nth-child(2) {
+        background: blue;
+        align-self: flex-start;
+      }
+
+      @media (min-width: 520px) {
+        .columns {
+            flex-direction: row;
+        }
+      }
+    </style>
+    <title>Flex Box 2</title>
+  </head>
+  <body>
+    <ul class="navbar">
+      <li><a class="a" href="#">Home</a></li>
+      <li><a href="#">Free Service not available today for golden card</a></li>
+      <li><a href="#">Free Service not available today for golden card</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Log In</a></li>
+
+      <li><a class="a" href="#">Home</a></li>
+      <li><a href="#">Free Service not available today for golden card</a></li>
+      <li><a href="#">Free Service not available today for golden card</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Log In</a></li>
+    </ul>
+
+    <div class="columns">
+      <article class="card">
+        <h3>First Heading</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+      </article>
+      <article class="card">
+        <h3>Second Heading</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+      </article>
+      <article class="card">
+        <h3>Long Paragraph</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam.
+        </p>
+      </article>
+    </div>
+  </body>
+</html>
