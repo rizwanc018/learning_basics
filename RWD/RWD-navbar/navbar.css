@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower:300,600');
+
+:root {
+    --background: rgba(71, 212, 90, 0.747);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* html,
+body {
+  height: 100%;
+  margin: 0;
+} */
+
+body {
+    margin: 0;
+    font-family: 'Indie Flower', sans-serif;
+}
+
+.main {
+    background-image: url('cloud.jpg');
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    background-blend-mode: darken ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background: var(--background);
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+nav {
+    border: 7px solid red;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--background);
+}
+
+nav ul {
+    border: 5px solid green;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    border: 3px solid blue;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+nav a {
+    border: 1px solid black;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: black;
+}

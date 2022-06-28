@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        font-size: 4rem;
+      }
+      p,
+      a {
+        margin: auto;
+      }
+      p::before,
+      p::after {
+        content: "Before";
+        background-color: red;
+        font-size: 1rem;
+        display: block;
+        width: fit-content;
+        /* height: 10px; */
+      }
+      p::after {
+        content: "After";
+      }
+
+      a[tool-tip] {
+        text-decoration: none;
+        position: relative;
+        /* border: 2px solid rebeccapurple; */
+      }
+      a[tool-tip]::after {
+        content: attr(tool-tip);
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 24%;
+        padding: 0.5em;
+        font-size: 0.4em;
+        background-color: rgba(0, 0, 0, 0.445);
+        color: white;
+        border-radius: 10px;
+        transform: scale(0);
+        transition: transform ease-out 150ms, bottom ease-out 150ms;
+      }
+
+      a[tool-tip]:hover::after {
+        transform: scale(1);
+        bottom: 100%;
+      }
+    </style>
+    <title>Before and After</title>
+  </head>
+  <body>
+    <p>The content is this</p>
+    <a tool-tip="cool cool">Tool Tip</a>
+  </body>
+</html>
