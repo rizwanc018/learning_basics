@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            /* border: 2px solid greenyellow; */
+        }
+
+        body {
+            text-align: center;
+        }
+
+        h1,
+        h3 {
+            text-transform: uppercase;
+            font-family: 'Muli', monospace;
+        }
+
+        .intro {
+            font-size: 5rem;
+            color: rgba(255, 81, 0, 0.973);
+            display: inline-block;
+            position: relative;
+            
+        }
+
+        h1::before,
+        h1::after {
+            content: ' ';
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+
+        }
+
+        h1::before {
+            background-color: white;
+            /* width: 100%; */
+            bottom: 0;
+            left: -.3em;
+            right: -.3em;
+            z-index: -1;
+        }
+
+        h1::after {
+            background-color: rgba(255, 81, 0, 0.973);
+            width: 100vw;
+            z-index: -2;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+
+        p {
+            font-family: 'Quicksand' serif;
+            text-transform: capitalize;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            /* background-color: red; */
+            gap: 2rem;
+        }
+
+        .card {
+            height: 300px;
+            position: relative;
+            background-color: black;
+        }
+
+        .card::before, .card::after {
+            content: '';
+            position: absolute;
+            inset: 1.7em;
+        }
+
+        .card::before {
+            /* background-color: firebrick; */
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            transform: scale(0,1);
+            transition: transform ease 250ms;
+        }
+
+        .card:hover::before {
+            transform: scale(1.06,1);
+        }
+
+        .card::after {
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+            transform: scale(1,0);
+            transition: transform ease 250ms;
+        }
+
+        .card:hover::after {
+            transform: scale(1,1.06);
+        }
+
+        .card-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            /* opacity: 1; */
+            transition: opacity linear 250ms;
+        }
+
+        .card:hover .card-img {
+            opacity: 0.7;
+        }
+
+        .card-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: white;
+        }
+    </style>
+    <title>Before & After 3</title>
+</head>
+
+<body>
+    <h1 class="intro">The simple Heading</h1>
+
+    <div class="container">
+        <div class="card">
+            <img class="card-img" src="image1.jpg" alt="">
+            <div class="card-text">
+                <h3 class="card-title">The Title</h3>
+                <p class="card-body">some text on the card</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img" src="img2.jpg" alt="">
+            <div class="card-text">
+                <h3 class="card-title">The Title</h3>
+                <p class="card-body">some text on the card</p>
+            </div>
+        </div>
+        </divc>
+</body>
+
+</html>
