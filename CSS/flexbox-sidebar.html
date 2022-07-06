@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: rgba(128, 128, 128, 0.205);
+        }
+
+        .container {
+            /* background: rgba(255, 0, 0, 0.116); */
+            width: 80%;
+            height: 80vh;
+            margin: 70px auto;
+
+
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .sidebar, .content {
+            width: 100%;
+            border-radius: 1rem;
+            box-shadow: rgba(47, 97, 189, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(74, 89, 223, 0.2) 0px -3px 0px inset;
+
+        }
+
+        .sidebar {
+            background: rgb(15, 139, 241);
+            /* height: 20vh; */
+            flex: 1 1 20%;
+            min-width: 10ch;
+        }
+
+        .content {
+            background: white;
+            flex: 1 1 80%;
+            min-width: 50ch;
+        }
+    </style>
+
+    <title>Flexbox Sidebar</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar"></div>
+        <div class="content"></div>
+    </div>
+</body>
+</html>
