@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
     <title>RWD Navbar</title>
 </head>
+
 <body>
     <header>
         <h1 class="logo">Cloud</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <nav>
             <ul>
                 <li><a href="#">Product</a></li>
@@ -16,9 +22,13 @@
                 <li><a href="#">Sign up</a></li>
             </ul>
         </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span class="burger"></span>
+        </label>
     </header>
     <main class="main">
         <h2>Clouds</h2>
     </main>
 </body>
+
 </html>

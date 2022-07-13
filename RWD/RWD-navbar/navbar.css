@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower:300,600');
 
 :root {
-    --background: rgba(71, 212, 90, 0.747);
+    --background: rgb(216 235 255 / 27%);
 }
 
 * {
@@ -16,14 +15,13 @@ body {
 
 body {
     margin: 0;
-    font-family: 'Indie Flower', sans-serif;
-}
+    font-family: 'Ubuntu Mono', monospace;}
 
 .main {
     background-image: url('cloud.jpg');
     height: 100vh;
     background-color: rgb(255, 255, 255);
-    background-blend-mode: darken ;
+    /* background-blend-mode: darken ; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -39,38 +37,146 @@ header {
     position: fixed;
     width: 100%;
     z-index: 999;
+    text-transform: uppercase;
+    color:white;
+
+
 }
 
 nav {
-    border: 7px solid red;
+    /* border: 7px solid red; */
     position: absolute;
     text-align: left;
     top: 100%;
     left: 0;
     width: 100%;
     background-color: var(--background);
+    /* display: none; */
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease;
 }
 
 nav ul {
-    border: 5px solid green;
+    /* border: 5px solid green; */
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 nav li {
-    border: 3px solid blue;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
+    /* border: 3px solid blue; */
+    margin-bottom: 1em;
+    margin-left: 1em;
 }
 
 nav a {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     text-decoration: none;
     color: white;
     text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 200ms ease;
 }
 
 nav a:hover {
     color: black;
+}
+
+
+.nav-toggle:checked ~ nav {
+    /* display: block; */
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    background: white;
+    display: block;
+    width: 2em;
+    height: 2px;
+    border-radius: 2px;
+    /* margin-top: 10px; */
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+
+.nav-toggle:checked span {
+    transform: rotate(45deg);
+}
+
+@media  (min-width: 755px) {
+    .nav-toggle-label {
+        display: none;
+    }
+
+    nav {
+        all: unset;
+    }
+
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
+
+    header, nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+
+    nav ul li {
+        margin-bottom: 0;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        background: black;
+        height: 4px;
+        position: absolute;
+        bottom: 1.75rem;
+        right: 0;
+        left: 0;
+        transform: scale(0,1);
+        transition: transform 350ms ease; 
+    }
+
+    nav a:hover::before {
+        transform: scale(1,1);
+    }
 }
