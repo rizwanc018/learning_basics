@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(name) {
+                this.name = name;
+            }
+
+            // printName() {
+            //     setTimeout(() => {
+            //         console.log('Name = ' + this.name)
+            //     }, 100)
+            // }
+            printNameArrow = () =>  console.log('Arrow = ' + this.name);
+            printName() {
+                console.log('Name = ' + this.name);
+            }
+            
+        }
+        let person = new Person('Bob')
+        person.printNameArrow();
+        person.printName();
+        // console.log('outside' + this.name);
+    </script>
+</body>
+
+</html>
